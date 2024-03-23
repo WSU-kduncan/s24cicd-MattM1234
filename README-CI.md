@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project will create a container image from a Dockerfile that will use nginx to host a website on the users local machine.
+This project will create a container image from a Dockerfile that will use nginx to host a website on the users local machine. It will be created within WSL using Docker Desktop.
 
 ## How To
 
