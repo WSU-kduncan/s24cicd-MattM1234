@@ -14,3 +14,35 @@ This project will create a container image from a Dockerfile that will use nginx
 - To run the container, use the command `docker run` followed by any options, then the port number, and the name of the image.
 - I used the command `docker run -d -p 80:80 [name]` to run my container
 - To view the website, open a browser and enter the localhost IP. If a specific port was specified it should be entered as well.
+
+## Repo Creation
+
+- Login into Docker Hub
+- Choose the create repository option
+- Fill out the details
+- Finish creating
+
+## How to Authenticate 
+
+- To authenticate to Docker Hub, first run `docker login`
+- `docker login` requires sudo or root user to run
+- It will prompt for your information if successful
+- Once finished, use `docker logout` to exit
+
+## How to Push
+
+- Create a public repository on Docker Hub
+- Before pushing, a tag is needed
+- Use the command `docker tag [IMAGE NAME] [YOUR USER NAME]/[REPO NAME]`
+- In the command line, run `docker push [YOUR USER NAME]/[REPO NAME]`
+
+## Github Secrets
+
+- To set a secret, access the repository settings
+- Ener the name of the secret and its value
+- In this project I set two secrets, DOCKER_USERNAME and DOCKER_PASSWORD which hold the respective information
+
+## Github Workflow
+
+- Workflows runs a job(s) when an attached event is triggered
+- In my project, the variables referencing my docker username and password along with my repository would need to be changed if someone else were to use it
