@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project will create a container image from a Dockerfile that will use nginx to host a website on the users local machine. It will be created within WSL using Docker Desktop.
+This project will create a container image from a Dockerfile that will use nginx to host a website on the users local machine. It will be created within WSL using Docker Desktop. This project will also build a docker image on a successful push that can be viewed in the linked repository below.
 
 ## How To
 
@@ -33,6 +33,7 @@ This project will create a container image from a Dockerfile that will use nginx
 
 - Create a public repository on Docker Hub
 - Before pushing, a tag is needed
+- Make sure you are logged in as well
 - Use the command `docker tag [IMAGE NAME] [YOUR USER NAME]/[REPO NAME]`
 - In the command line, run `docker push [YOUR USER NAME]/[REPO NAME]`
 
@@ -49,4 +50,9 @@ https://hub.docker.com/r/mangan21/project4
 ## Github Workflow
 
 - Workflows runs a job(s) when an attached event is triggered
+- In this project, on a push event, a job will run that builds a docker image and pushes it to my docker hub repository
 - In my project, the variables referencing my docker username and password along with my repository would need to be changed if someone else were to use it
+
+## Continuous Integration Diagram
+
+![diagram](./images/CIDiagram.png)
