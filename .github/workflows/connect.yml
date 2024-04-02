@@ -12,7 +12,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Image
-        run: docker build -t mangan21/project4 ./Dockerfile
+        run: docker build -t mangan21/project4 ../Dockerfile
 
       - name: Push Image
         run: docker push mangan21/project4
