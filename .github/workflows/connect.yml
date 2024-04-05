@@ -16,7 +16,7 @@ jobs:
 
       - name: Docker meta
         id: meta
-        uses: docker/metadata-actions@v5
+        uses: docker/metadata-action@v5
         with:
           images: mangan21/project4
           tags:
