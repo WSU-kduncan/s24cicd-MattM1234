@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project will create a container image from a Dockerfile that will use nginx to host a website on the users local machine. It will be created within WSL using Docker Desktop. This project will also build a docker image on a successful push that can be viewed in the linked repository below.
+This project will create a container image from a Dockerfile that will use nginx to host a website on the users local machine. It will be created within WSL using Docker Desktop. This project will also build a docker image on a successful push that can be viewed in the linked repository below. Tags will be included with semantic versioning
 
 ## How To
 
@@ -49,9 +49,13 @@ https://hub.docker.com/r/mangan21/project4
 
 ## Github Workflow
 
-- Workflows runs a job(s) when an attached event is triggered
+- Workflows runs a job(s) when a specified event is triggered
 - In this project, on a push event, a job will run that builds a docker image and pushes it to my docker hub repository
 - In my project, the variables referencing my docker username and password along with my repository would need to be changed if someone else were to use it
+
+## Tag Generation
+
+- 
 
 ## Continuous Integration Diagram
 
