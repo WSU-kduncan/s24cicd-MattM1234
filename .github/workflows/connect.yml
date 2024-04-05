@@ -18,8 +18,9 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: mangan21/project4
-          tags:
+          images: |
+            mangan21/project4
+          tags:  |
             type=ref,event=branch
             type=ref,event=pr
             type=semver,pattern={{version}}
