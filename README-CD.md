@@ -38,4 +38,7 @@ To install docker on an instance, follow the instructions on the Docker document
 
 ## Modify a Webhook Service so that it is Listening as Soon as the System is Started
 
-- 
+- To setup the webhook so that it is listening on start, modify the `webhook.service` file
+- I changed it within this project to start using the path to the `hooks.json` file
+- The service will need to be restarted after the change
+- Use the command 
