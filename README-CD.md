@@ -9,6 +9,16 @@ To generate a tag in git:
 - Once the tag is created, push it to the repository using `git push origin v[tag]`
 - This will add the tag to your repository and the github workflow will add the new tag to Docker Hub
 
+## Github Workflow
+
+- Workflows runs a job(s) when a specified event is triggered
+- In this project, on a push event including a new tag, a job will run that builds a docker image and pushes it to my docker hub repository alongside updating the latest image.
+- In my project, the variables referencing my docker username and password along with my repository would need to be changed if someone else were to use it
+
+## DockerHub Link
+
+[Link to DockerHub project](https://hub.docker.com/r/mangan21/project4)
+
 ## How to Install Docker to an Instance
 
 To install docker on an instance, follow the instructions on the Docker documentation: [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
@@ -40,6 +50,7 @@ To install docker on an instance, follow the instructions on the Docker document
 
 - To setup the webhook so that it is listening on start, modify the `webhook.service` file
 - I changed it within this project to start if `hooks.json` exists and then running the `hooks.json` file
+- To make it restart always, add `Restart=Always`
 - The service will need to be restarted after the change
 - First, use the command `sudo systemctl daemon-reload`
 - Then use the command `sudo systemctl restart webhook.service` to restart the service
