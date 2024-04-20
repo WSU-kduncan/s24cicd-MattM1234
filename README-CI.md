@@ -50,12 +50,14 @@ https://hub.docker.com/r/mangan21/project4
 ## Github Workflow
 
 - Workflows runs a job(s) when a specified event is triggered
-- In this project, on a push event, a job will run that builds a docker image and pushes it to my docker hub repository
+- In this project, on a push event including a new tag, a job will run that builds a docker image and pushes it to my docker hub repository alongside updating the latest image.
 - In my project, the variables referencing my docker username and password along with my repository would need to be changed if someone else were to use it
 
 ## Tag Generation
 
-- 
+- To generate a tag in Github, first create a new tag using `git tag vX.X.X` with X being the major, minor, and patch numbers in that order.
+- Once the tag is created, push it to the repository using `git push origin vX.X.X`
+- This will add the tag to your repository and the github workflow will add the new tag to Docker Hub
 
 ## Continuous Integration Diagram
 
