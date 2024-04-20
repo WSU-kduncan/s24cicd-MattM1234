@@ -2,6 +2,8 @@
 
 This project will generate tags using semantic versioning and push docker images to DockerHub. The project will also start a webhook which will update the docker image to its latest version and message the listener of its success.
 
+![diagram](./images/Project5Diagram.png)
+
 ## How to Generate a tag in git / GitHub
 
 To generate a tag in git:
