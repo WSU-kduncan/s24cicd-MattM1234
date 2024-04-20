@@ -1,6 +1,6 @@
 # Project Overview
 
-This project will generate tags using semantic versioning and push docker images to Docker Hub. 
+This project will generate tags using semantic versioning and push docker images to DockerHub. The project will also start a webhook which will update the docker image to its latest version and message the listener of its success.
 
 ## How to Generate a tag in git / GitHub
 
@@ -46,4 +46,8 @@ To install docker on an instance, follow the instructions on the Docker document
 
 ## How to Configure GitHub and DockerHub to message the listener
 
-
+- To configure DockerHub, under your repository, add a webhook using the URL address of your website with the webhook attached
+- If your webhook is working, updates on success or fail will be displayed
+- To configure GitHub, add a webhook under your repository settings using the same format as above for DockerHub
+- Github also requires a secret and event specification
+- Deliveries can be viewed under the manage webhook tab
